@@ -1,0 +1,11 @@
+.o-site-wrap {
+    max-width: $site-wrap-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.o-site-wrap--padding {
+    max-width: $site-wrap-width + ($spacing-unit * 2);
+    padding-left: $spacing-unit;
+    padding-right: $spacing-unit;
+}
