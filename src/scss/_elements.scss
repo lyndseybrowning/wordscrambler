@@ -4,7 +4,11 @@ html {
 }
 
 body {
+    font-family: 'Alegreya Sans';
     font-size: $base-font-size;
+    background-color: $scooter;
+    color: $white;
+    line-height: 1.5;
 }
 
 h1,

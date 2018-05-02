@@ -1,0 +1,14 @@
+.c-footer {
+  position: relative;
+}
+
+.c-footer::after {
+  content: ' ';
+  position: absolute;
+  background-image: url('#{$footerImage}');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  width: 100%;
+  padding-top: 70%;
+}
