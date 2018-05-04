@@ -1,14 +1,16 @@
 .c-footer {
-  position: relative;
+  background: {
+    image: url('#{$footerImage}');
+    size: contain;
+    repeat: no-repeat;
+    position: bottom center;
+  }
+  margin-top: auto;
+  height: 600px;
 }
 
-.c-footer::after {
-  content: ' ';
-  position: absolute;
-  background-image: url('#{$footerImage}');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-y: bottom;
-  width: 100%;
-  padding-top: 70%;
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;  
 }
