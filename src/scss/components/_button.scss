@@ -1,0 +1,12 @@
+.c-button {
+  cursor: pointer;
+  border-radius: $spacing-unit--sm;
+  padding: $spacing-unit;
+  background-color: $biscay;
+  color: $white;
+
+  &:hover {
+    background-color: $supernova;
+    color: $biscay;
+  }
+}
