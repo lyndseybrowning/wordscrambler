@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import logo from '../img/logo.svg';
 
 const App = () => (
@@ -7,7 +7,9 @@ const App = () => (
     <Fragment>
       <header className="c-header">
         <div className="o-wrapper">
-          <img src={logo} alt="Word Scrambler Logo" aria-roledescription="logo" />
+          <Link to="/">
+            <img src={logo} alt="Word Scrambler Logo" aria-roledescription="logo" />
+          </Link>
         </div>
       </header>
       <main>
