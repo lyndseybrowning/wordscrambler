@@ -63,6 +63,9 @@ const config = {
       chunkFilename: '[id].css',
     }),
   ],
+  devServer: {
+    historyApiFallback: true,
+  },
 };
 
 if (!production) {

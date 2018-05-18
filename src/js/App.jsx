@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import logo from '../img/logo.svg';
+import HomePage from './pages/Home';
+import GamePage from './pages/Game';
 
 const App = () => (
   <Router>
@@ -14,12 +16,8 @@ const App = () => (
       </header>
       <main>
         <div className="o-wrapper">
-          <h1>How to Play</h1>
-          <p>
-            Use your mouse or keyboard to find as many words as you can before the timer runs out!
-          </p>
-          <p>Ready to play? Click the button below.</p>
-          <button type="button" className="c-button">Start Game</button>
+          <Route path="/" component={HomePage} exact />
+          <Route path="/play" component={GamePage} />
         </div>
       </main>
       <footer className="c-footer" />
