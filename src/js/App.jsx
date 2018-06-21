@@ -9,7 +9,7 @@ const App = () => (
     <Fragment>
       <header className="c-header">
         <div className="o-wrapper">
-          <Link to="/">
+          <Link to="/" className="c-header__link">
             <img src={logo} alt="Word Scrambler Logo" aria-roledescription="logo" />
           </Link>
         </div>

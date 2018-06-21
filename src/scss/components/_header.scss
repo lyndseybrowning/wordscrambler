@@ -1,3 +1,7 @@
 .c-header {
   background-color: $white;
+
+  &__link {
+    display: inline-block;
+  }
 }
