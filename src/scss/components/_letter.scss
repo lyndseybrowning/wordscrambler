@@ -1,0 +1,9 @@
+.c-letter {
+    display: block;
+    padding: $spacing-unit;
+    text-transform: uppercase;
+    border: 3px solid #0c1b22;
+    font-size: $spacing-unit--lg;
+    color: #0c1b22;
+    text-align: center;
+}
