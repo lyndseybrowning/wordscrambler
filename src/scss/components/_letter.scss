@@ -5,7 +5,7 @@
     border: 1px solid $scooter;
     border-radius: 10px;
     font-size: 2rem;
-    color: white;
+    color: $white;
     background-color: $scooter;
     text-align: center;
 
@@ -14,7 +14,8 @@
     }
 
     &--selected {
-        border-color: $supernova;
         background-color: $supernova;
+        border-color: rgba(255, 204, 0, 0.15);
+        border-style: ridge;
     }
 }

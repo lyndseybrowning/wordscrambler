@@ -22,7 +22,7 @@ class Letter extends Component {
     const cls = this.state.selected ? 'c-letter c-letter--selected' : 'c-letter';
 
     return (
-      <button className={cls} onClick={this.toggleSelected}>
+      <button className={cls} onClick={this.toggleSelected} onTouchStart={this.toggleSelected}>
         {this.props.letter}
       </button>
     );
