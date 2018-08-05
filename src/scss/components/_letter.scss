@@ -1,9 +1,20 @@
 .c-letter {
     display: block;
-    padding: $spacing-unit;
     text-transform: uppercase;
-    border: 3px solid #0c1b22;
-    font-size: $spacing-unit--lg;
-    color: #0c1b22;
+    padding: $spacing-unit;
+    border: 1px solid $scooter;
+    border-radius: 10px;
+    font-size: 2rem;
+    color: white;
+    background-color: $scooter;
     text-align: center;
+
+    &:focus {
+        outline: 3px dotted $scooter;
+    }
+
+    &--selected {
+        border-color: $supernova;
+        background-color: $supernova;
+    }
 }

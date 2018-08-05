@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Fragment, Component } from 'react';
 import Letter from '../components/Letter';
 
 class Game extends Component {
@@ -11,15 +11,20 @@ class Game extends Component {
   }
 
   renderLetters() {
-    return this.state.letters.map(item => <Letter letter={item.letter} key={item.id} />);
+    const { letters } = this.state;
+
+    return letters.map(item => (
+      <div className={`o-grid__item u-1/${letters.length}`} key={item.id}>
+        <Letter letter={item.letter} />
+      </div>
+    ));
   }
 
   render() {
     return (
-      <div className="o-grid">
-        <div className="o-grid__item">{this.renderLetters()}</div>
-        <button onClick={this.reorder} />
-      </div>
+      <Fragment>
+        <div className="o-grid o-grid--gutter">{this.renderLetters()}</div>
+      </Fragment>
     );
   }
 }

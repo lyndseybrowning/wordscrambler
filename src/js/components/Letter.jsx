@@ -1,9 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-const Letter = ({ letter }) => (
-  <span className="c-letter">{letter}</span>
-);
+class Letter extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      selected: false,
+    };
+
+    this.toggleSelected = this.toggleSelected.bind(this);
+  }
+
+  toggleSelected() {
+    this.setState({
+      selected: !this.state.selected,
+    });
+  }
+
+  render() {
+    const cls = this.state.selected ? 'c-letter c-letter--selected' : 'c-letter';
+
+    return (
+      <button className={cls} onClick={this.toggleSelected}>
+        {this.props.letter}
+      </button>
+    );
+  }
+}
 
 Letter.propTypes = {
   letter: PropTypes.string.isRequired,
