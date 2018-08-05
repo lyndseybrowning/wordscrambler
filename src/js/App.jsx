@@ -1,6 +1,9 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import logo from '../img/logo.svg';
+import wordscrambler from './scripts/wordscrambler';
+
+// pages
 import HomePage from './pages/Home';
 import GamePage from './pages/Game';
 
@@ -17,7 +20,10 @@ const App = () => (
       <main>
         <div className="o-wrapper">
           <Route path="/" component={HomePage} exact />
-          <Route path="/play" component={GamePage} />
+          <Route
+            path="/play"
+            render={() => <GamePage letters={wordscrambler.createLetters()} />}
+          />
         </div>
       </main>
       <footer className="c-footer" />
