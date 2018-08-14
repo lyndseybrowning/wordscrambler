@@ -1,14 +1,11 @@
 import React, { Fragment, Component } from 'react';
+import PropTypes, { shape } from 'prop-types';
 import Letter from '../components/Letter';
 
 class Game extends Component {
-  constructor({ letters }) {
-    super();
-
-    this.state = {
-      letters,
-    };
-  }
+  state = {
+    letters: this.props.letters,
+  };
 
   renderLetters() {
     const { letters } = this.state;
@@ -26,5 +23,12 @@ class Game extends Component {
     );
   }
 }
+
+Game.propTypes = {
+  letters: PropTypes.arrayOf(shape({
+    id: PropTypes.number.isRequired,
+    letter: PropTypes.string.isRequired,
+  })).isRequired,
+};
 
 export default Game;

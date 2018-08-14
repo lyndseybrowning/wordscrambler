@@ -3,21 +3,15 @@ import PropTypes from 'prop-types';
 import config from '../scripts/config';
 
 class Letter extends Component {
-  constructor() {
-    super();
+  state = {
+    selected: false,
+  };
 
-    this.state = {
-      selected: false,
-    };
-
-    this.toggleSelected = this.toggleSelected.bind(this);
-  }
-
-  toggleSelected() {
+  toggleSelected = () => {
     this.setState({
       selected: !this.state.selected,
     });
-  }
+  };
 
   render() {
     const cls = this.state.selected ? 'c-letter c-letter--selected' : 'c-letter';
