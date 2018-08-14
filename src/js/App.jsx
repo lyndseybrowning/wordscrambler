@@ -5,7 +5,7 @@ import wordscrambler from './scripts/wordscrambler';
 
 // pages
 import HomePage from './pages/Home';
-import GamePage from './pages/Game';
+import PlayPage from './pages/Play';
 
 const App = () => (
   <Router>
@@ -22,7 +22,7 @@ const App = () => (
           <Route path="/" component={HomePage} exact />
           <Route
             path="/play"
-            render={() => <GamePage letters={wordscrambler.createLetters()} />}
+            render={() => <PlayPage letters={wordscrambler.createLetters()} />}
           />
         </div>
       </main>

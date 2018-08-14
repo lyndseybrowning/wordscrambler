@@ -13,10 +13,8 @@ class Game extends Component {
   renderLetters() {
     const { letters } = this.state;
 
-    return letters.map(item => (
-      <div className={`o-grid__item u-1/${letters.length}`} key={item.id}>
-        <Letter letter={item.letter} />
-      </div>
+    return letters.map(({ id, letter }) => (
+      <Letter key={id} letter={letter} width={letters.length} />
     ));
   }
 
