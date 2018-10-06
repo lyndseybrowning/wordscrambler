@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<div
+  className="o-grid__item u-1/6"
+>
+  <button
+    className="c-letter"
+    data-test-id="letter"
+    onClick={[Function]}
+    onTouchStart={[Function]}
+  >
+    A
+  </button>
+</div>
+`;

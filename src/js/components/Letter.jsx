@@ -14,12 +14,18 @@ class Letter extends Component {
   };
 
   render() {
+    const letter = this.props.letter.toUpperCase();
     const cls = this.state.selected ? 'c-letter c-letter--selected' : 'c-letter';
 
     return (
       <div className={`o-grid__item u-1/${this.props.width}`}>
-        <button className={cls} onClick={this.toggleSelected} onTouchStart={this.toggleSelected}>
-          {this.props.letter}
+        <button
+          className={cls}
+          data-test-id="letter"
+          onClick={this.toggleSelected}
+          onTouchStart={this.toggleSelected}
+        >
+          {letter}
         </button>
       </div>
     );

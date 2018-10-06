@@ -1,4 +1,8 @@
 {
+    "globals": {
+        "shallow": true,
+        "mount": true
+    },
     "extends": "airbnb",
     "env": {
         "browser": true,

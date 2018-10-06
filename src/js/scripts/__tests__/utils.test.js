@@ -1,4 +1,4 @@
-import utils from '../scripts/utils';
+import utils from '../utils';
 
 describe('getRandomItemFromArray', () => {
   it('returns null when no array is passed', () => {
