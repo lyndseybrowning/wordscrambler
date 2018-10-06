@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import config from '../scripts/config';
+import config from '../../scripts/config';
 
 class Letter extends Component {
   state = {
